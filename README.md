@@ -1,3 +1,3 @@
 # dark_addon
 
-An addon for use with EWT
+An addon for use with EWT functionality.
