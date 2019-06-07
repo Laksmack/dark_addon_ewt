@@ -3,23 +3,31 @@ local addon, dark_addon = ...
 local modifiers = { }
 
 function modifiers:shift()
-  return IsShiftKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0x10) 
 end
 
 function modifiers:control()
-  return IsControlKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0x11)  
 end
 
 function modifiers:alt()
-  return IsAltKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0x12) 
 end
 
 function modifiers:lshift()
-  return IsLeftShiftKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0xA0) 
 end
 
 function modifiers:lcontrol()
-  return IsLeftControlKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0xA2) 
+end
+
+function modifiers:lwindows()
+  return GetKeyState(0x5B) 
+end
+
+function modifiers:rwindows()
+  return GetKeyState(0x5C) 
 end
 
 function modifiers:lalt()
@@ -27,11 +35,11 @@ function modifiers:lalt()
 end
 
 function modifiers:rshift()
-  return IsRightShiftKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0xA1) 
 end
 
 function modifiers:rcontrol()
-  return IsRightControlKeyDown() and GetCurrentKeyBoardFocus() == nil
+  return GetKeyState(0xA3) 
 end
 
 function modifiers:ralt()
