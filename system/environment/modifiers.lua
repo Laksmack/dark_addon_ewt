@@ -45,6 +45,8 @@ function modifiers:rcontrol()
   return GetKeyState(0xA3) 
 end
 
+-- These are not in the microsoft docs. Unsure as to why ALT keys dont have left or right
+
 function modifiers:ralt()
   return IsRightAltKeyDown() and GetCurrentKeyBoardFocus() == nil
 end
