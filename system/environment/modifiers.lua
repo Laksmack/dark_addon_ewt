@@ -31,7 +31,7 @@ function modifiers:rwindows()
 end
 
 -- These are not in the microsoft docs. Unsure as to why ALT keys dont have left or right
-
+-- blah blahg
 
 function modifiers:lalt()
   return IsLeftAltKeyDown() and GetCurrentKeyBoardFocus() == nil
